@@ -1,0 +1,15 @@
+name: Web App Container
+description: 'Simple Web Application'
+inputs:
+  who: 
+    description: 'Who?'
+    required: true
+    default: 'No Name'
+outputs:
+  time:
+    description: 'The time now!'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{inputs.who}}
